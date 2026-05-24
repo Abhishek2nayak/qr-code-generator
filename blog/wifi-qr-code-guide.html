@@ -1,0 +1,564 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WiFi QR Code Generator: Share Your Network Without Sharing the Password (2025)</title>
+  <meta name="description"
+    content="Step-by-step guide to creating a WiFi QR code for your home, café, hotel, or office. Let guests connect automatically — no password typing needed. Free generator." />
+  <link rel="canonical" href="https://freeqrgenerator.mythosh.com/blog/wifi-qr-code-guide.html" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://freeqrgenerator.mythosh.com/blog/wifi-qr-code-guide.html" />
+  <meta property="og:title" content="WiFi QR Code Generator: Share Your Network Without Sharing the Password" />
+  <meta property="og:description"
+    content="Create a WiFi QR code for free — guests connect with one scan, no password required." />
+  <meta property="og:image" content="https://freeqrgenerator.mythosh.com/logo.png" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Create a WiFi QR Code",
+    "description": "Step-by-step guide to generating a WiFi QR code so guests can connect automatically.",
+    "step": [
+      { "@type": "HowToStep", "name": "Open the QR generator", "text": "Go to freeqrgenerator.mythosh.com and click the WiFi tab." },
+      { "@type": "HowToStep", "name": "Enter your network details", "text": "Type your network name (SSID), choose the security type (WPA/WEP/None), and enter the password." },
+      { "@type": "HowToStep", "name": "Customise (optional)", "text": "Choose colours and a dot style if desired." },
+      { "@type": "HowToStep", "name": "Download the QR code", "text": "Download as PNG (200px, 500px, or 1000px) and print or display it." }
+    ]
+  }
+  </script>
+
+  <link
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap"
+    rel="stylesheet" />
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    :root {
+      --bg: #f5f5f0;
+      --surface: #fff;
+      --surface-alt: #f0efea;
+      --border: #e2e0d8;
+      --text: #1a1a18;
+      --text-secondary: #6b6962;
+      --accent: #22c55e;
+      --accent-soft: rgba(34, 197, 94, 0.08);
+      --radius: 10px;
+      --radius-sm: 6px;
+      --shadow-sm: 0 1px 3px rgba(0, 0, 0, .04), 0 1px 2px rgba(0, 0, 0, .06);
+      --font: "DM Sans", -apple-system, sans-serif
+    }
+
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased
+    }
+
+    .site-nav {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 0 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: var(--shadow-sm)
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--text)
+    }
+
+    .nav-brand img {
+      height: 36px;
+      width: 36px;
+      border-radius: 8px;
+      object-fit: contain
+    }
+
+    .nav-brand-name {
+      font-size: 17px;
+      font-weight: 700;
+      letter-spacing: -.3px
+    }
+
+    .nav-brand-name span {
+      color: var(--accent)
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      list-style: none
+    }
+
+    .nav-links a {
+      display: block;
+      padding: 6px 14px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-secondary);
+      text-decoration: none;
+      border-radius: var(--radius-sm);
+      transition: color .2s, background .2s
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--text);
+      background: var(--surface-alt)
+    }
+
+    .article-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 24px 80px
+    }
+
+    .article-tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      color: var(--accent);
+      background: var(--accent-soft);
+      padding: 4px 10px;
+      border-radius: 4px;
+      margin-bottom: 16px
+    }
+
+    .article-title {
+      font-size: clamp(24px, 4vw, 36px);
+      font-weight: 700;
+      letter-spacing: -.4px;
+      line-height: 1.2;
+      margin-bottom: 12px
+    }
+
+    .article-meta {
+      font-size: 13px;
+      color: var(--text-secondary);
+      margin-bottom: 32px
+    }
+
+    .article-body {
+      font-size: 16px;
+      line-height: 1.75
+    }
+
+    .article-body h2 {
+      font-size: 22px;
+      font-weight: 700;
+      margin: 36px 0 12px;
+      letter-spacing: -.2px
+    }
+
+    .article-body h3 {
+      font-size: 17px;
+      font-weight: 600;
+      margin: 22px 0 8px
+    }
+
+    .article-body p {
+      margin-bottom: 16px
+    }
+
+    .article-body ul,
+    .article-body ol {
+      margin: 0 0 16px 24px
+    }
+
+    .article-body li {
+      margin-bottom: 6px
+    }
+
+    .article-body a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500
+    }
+
+    .article-body a:hover {
+      text-decoration: underline
+    }
+
+    .article-body strong {
+      font-weight: 600
+    }
+
+    .callout {
+      background: var(--accent-soft);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      padding: 14px 18px;
+      margin: 24px 0;
+      font-size: 15px
+    }
+
+    .step-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px 22px;
+      margin: 16px 0;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start
+    }
+
+    .step-n {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      background: var(--accent);
+      color: #fff;
+      border-radius: 50%;
+      font-size: 14px;
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 2px
+    }
+
+    .step-box h3 {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 6px
+    }
+
+    .step-box p {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin: 0
+    }
+
+    .cta-box {
+      background: var(--accent-soft);
+      border: 1px solid rgba(34, 197, 94, .2);
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      margin: 36px 0;
+      text-align: center
+    }
+
+    .cta-box h3 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 6px
+    }
+
+    .cta-box p {
+      font-size: 14px;
+      color: var(--text-secondary);
+      margin-bottom: 16px
+    }
+
+    .cta-btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      padding: 12px 28px;
+      border-radius: var(--radius-sm);
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none
+    }
+
+    .cta-btn:hover {
+      background: #16a34a
+    }
+
+    .related-posts {
+      margin-top: 48px;
+      border-top: 1px solid var(--border);
+      padding-top: 32px
+    }
+
+    .related-posts h2 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 16px
+    }
+
+    .related-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 14px
+    }
+
+    .related-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 14px;
+      text-decoration: none;
+      color: inherit;
+      transition: box-shadow .2s
+    }
+
+    .related-card:hover {
+      box-shadow: var(--shadow-sm)
+    }
+
+    .related-card span {
+      display: block;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 4px
+    }
+
+    .related-card p {
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 1.4
+    }
+
+    .site-footer {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      padding: 32px;
+      text-align: center
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      list-style: none;
+      margin-bottom: 12px
+    }
+
+    .footer-links a {
+      font-size: 13px;
+      color: var(--text-secondary);
+      text-decoration: none
+    }
+
+    .footer-links a:hover {
+      color: var(--accent)
+    }
+
+    .footer-copy {
+      font-size: 12px;
+      color: var(--text-secondary)
+    }
+
+    @media(max-width:600px) {
+      .nav-links {
+        display: none
+      }
+
+      .site-nav {
+        padding: 0 16px
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="site-nav" aria-label="Main navigation">
+    <a href="/" class="nav-brand">
+      <img src="../logo.png" alt="Free QR Code Generator logo" width="36" height="36" />
+      <span class="nav-brand-name">Free <span>QR</span> Generator</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Generator</a></li>
+      <li><a href="index.html" class="active">Blog</a></li>
+      <li><a href="../faq.html">FAQ</a></li>
+    </ul>
+  </nav>
+
+  <article class="article-wrap">
+    <span class="article-tag">How-To</span>
+    <h1 class="article-title">WiFi QR Code Generator: Share Your Network Without Sharing the Password</h1>
+    <p class="article-meta">May 2025 · 6 min read · By Free QR Code Generator Team</p>
+
+    <div class="article-body">
+      <p>Tired of reading out a 16-character WiFi password to every guest? A WiFi QR code lets anyone connect to your
+        network by simply pointing their phone camera at a printed code — no password required. This guide shows you
+        exactly how to create one for free in under two minutes.</p>
+
+      <h2>What is a WiFi QR Code?</h2>
+      <p>A WiFi QR code encodes your network name (SSID), security type, and password into a standard QR format that
+        smartphones can decode natively. When someone scans it with their iPhone (iOS 11+) or Android camera (Android
+        9+), the device automatically prompts them to join the network — no manual entry needed.</p>
+      <p>The format is called <strong>MECARD WiFi</strong> and looks like this internally:</p>
+      <pre
+        style="background:var(--surface-alt);border:1px solid var(--border);border-radius:6px;padding:12px 16px;font-size:13px;overflow-x:auto;margin:0 0 16px;font-family:monospace">WIFI:T:WPA;S:MyNetworkName;P:MyPassword;;</pre>
+      <p>This is all handled automatically by our generator — you just fill in the form fields.</p>
+
+      <h2>How to Create a WiFi QR Code (Step by Step)</h2>
+
+      <div class="step-box">
+        <span class="step-n">1</span>
+        <div>
+          <h3>Open the WiFi Tab</h3>
+          <p>Go to <a href="/">freeqrgenerator.mythosh.com</a> and click the <strong>WiFi</strong> tab at the top of the
+            generator.</p>
+        </div>
+      </div>
+
+      <div class="step-box">
+        <span class="step-n">2</span>
+        <div>
+          <h3>Enter Your Network Name (SSID)</h3>
+          <p>Type your WiFi network name exactly as it appears in your device's WiFi list. This is case-sensitive.</p>
+        </div>
+      </div>
+
+      <div class="step-box">
+        <span class="step-n">3</span>
+        <div>
+          <h3>Choose the Security Type</h3>
+          <p>Select <strong>WPA/WPA2</strong> for most home and office networks. Choose <strong>WEP</strong> only for
+            older routers. Select <strong>None</strong> for open networks that have no password (not recommended for
+            security).</p>
+        </div>
+      </div>
+
+      <div class="step-box">
+        <span class="step-n">4</span>
+        <div>
+          <h3>Enter the Password</h3>
+          <p>Type your WiFi password. Leave blank for open networks. The QR code updates in real time in the preview
+            panel.</p>
+        </div>
+      </div>
+
+      <div class="step-box">
+        <span class="step-n">5</span>
+        <div>
+          <h3>Customise (Optional)</h3>
+          <p>Use the Customise section to change colours or add a "Connect to WiFi" text label. Then download at 500px
+            for standard use or 1000px for printing on a framed sign.</p>
+        </div>
+      </div>
+
+      <div class="callout">
+        <strong>Pro tip:</strong> Add a label like "Scan to connect to WiFi" directly on the QR code download using the
+        Centre Label field. This removes ambiguity for guests who haven't seen a WiFi QR code before.
+      </div>
+
+      <h2>Where to Use Your WiFi QR Code</h2>
+      <ul>
+        <li><strong>Home</strong> — Frame it near your router or at your front door for visiting friends and family.
+        </li>
+        <li><strong>Café or restaurant</strong> — Place it on tables, at the till, or on the takeaway packaging.</li>
+        <li><strong>Hotel or Airbnb</strong> — Include it in the welcome booklet or on a laminated card in the room.
+        </li>
+        <li><strong>Office</strong> — Put it in the meeting room, reception area, or visitors' lounge.</li>
+        <li><strong>Events</strong> — Add it to event programmes, badge lanyards, or signage.</li>
+        <li><strong>Co-working space</strong> — Display it on every desk pod and phone booth.</li>
+      </ul>
+
+      <h2>Is It Safe to Use a WiFi QR Code?</h2>
+      <p>A WiFi QR code does encode your password inside the pattern — anyone who scans the code can view the raw data.
+        This means:</p>
+      <ul>
+        <li>The QR image itself should be treated as sensitive. Don't post it publicly online.</li>
+        <li>Anyone who photographs the QR code gains network access. Display it in controlled areas only.</li>
+        <li>For guest networks: create a separate guest SSID with limited bandwidth and access. Encode that password
+          instead of your main network's password.</li>
+        <li>Your password is <strong>never sent to any server</strong> when using our generator — everything is
+          processed in your browser.</li>
+      </ul>
+
+      <h2>Does a WiFi QR Code Work on All Phones?</h2>
+      <p>Yes, with one caveat:</p>
+      <ul>
+        <li><strong>iPhone (iOS 11+):</strong> Open the Camera app, point at the QR code, tap the notification banner.
+        </li>
+        <li><strong>Android (Android 9+ / Pixel):</strong> Open the Camera app, point, tap the popup.</li>
+        <li><strong>Samsung (One UI 2.0+):</strong> Use the Camera app or the QR scanner in the notification shade.</li>
+        <li><strong>Older Android (pre-9):</strong> Download a QR code reader app like "QR Code Reader" from the Play
+          Store.</li>
+      </ul>
+
+      <h2>What Happens If I Change My WiFi Password?</h2>
+      <p>Since our QR codes are static (data is baked into the pattern), you'll need to generate a new QR code with the
+        updated password and reprint it. This is why we recommend using a separate, simpler guest password that you
+        change less frequently. If you need a QR code that can be updated without reprinting, you'd need a dynamic QR
+        code service (which typically requires a paid subscription).</p>
+
+      <div class="cta-box">
+        <h3>Create Your WiFi QR Code — Free</h3>
+        <p>No account needed. Download as PNG and print it in under 2 minutes.</p>
+        <a href="/" class="cta-btn">Open WiFi QR Generator →</a>
+      </div>
+
+      <h2>Alternatives to WiFi QR Codes</h2>
+      <p>If you're looking for similar solutions, here are the tools most commonly compared:</p>
+      <ul>
+        <li><strong>QR Code Monkey</strong> — offers WiFi QR codes but limits free downloads to low resolution.</li>
+        <li><strong>QR Code Generator (Bitly)</strong> — WiFi QR codes require a paid plan.</li>
+        <li><strong>GoQR.me</strong> — basic WiFi QR generation but outdated interface.</li>
+        <li><strong>Our generator</strong> — 100% free, high-resolution (1000px PNG), custom colours, and no account
+          required.</li>
+      </ul>
+    </div>
+
+    <nav class="related-posts" aria-label="Related articles">
+      <h2>Related Articles</h2>
+      <div class="related-list">
+        <a href="what-is-a-qr-code.html" class="related-card">
+          <span>Guide</span>
+          <p>What is a QR Code? Complete Beginner's Guide</p>
+        </a>
+        <a href="qr-codes-for-business.html" class="related-card">
+          <span>Business</span>
+          <p>10 Ways to Use QR Codes for Your Business</p>
+        </a>
+        <a href="upi-qr-code-guide.html" class="related-card">
+          <span>Payments</span>
+          <p>UPI QR Code: Accept Payments with GPay & PhonePe</p>
+        </a>
+      </div>
+    </nav>
+  </article>
+
+  <footer class="site-footer">
+    <ul class="footer-links">
+      <li><a href="/">QR Generator</a></li>
+      <li><a href="index.html">Blog</a></li>
+      <li><a href="../faq.html">FAQ</a></li>
+      <li><a href="what-is-a-qr-code.html">What is a QR Code?</a></li>
+      <li><a href="upi-qr-code-guide.html">UPI QR Guide</a></li>
+    </ul>
+    <p class="footer-copy">© 2025 Free QR Code Generator · freeqrgenerator.mythosh.com</p>
+  </footer>
+</body>
+
+</html>

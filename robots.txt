@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://freeqrgenerator.mythosh.com/sitemap.xml
